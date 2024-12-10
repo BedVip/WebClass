@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="tk3.css" />
+  </head>
+  <body>
+    <style>
+      * {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+      }
+      .navbar {
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        justify-content: space-between;
+        font-family: padding;
+        align-items: center;
+        padding: 20px 30px;
+        background-color: #1029c9;
+        color: white;
+      }
+
+      .left-nav,
+      .right-nav {
+        display: flex;
+        align-items: center;
+      }
+
+      .right-nav ul {
+        list-style-type: none;
+        display: flex;
+      }
+
+      li a {
+        color: #f0f0f0;
+        background-color: #1029c9;
+        margin-left: 20px;
+        padding: 15px;
+        cursor: pointer;
+        transition: color 0.3s ease;
+        border-radius: 30px;
+        text-decoration: none;
+      }
+
+      li a:hover {
+        transition: 0, 25s;
+        text-decoration: none;
+        background: rgb(240, 240, 240);
+        color: #000000;
+      }
+
+      .navbar-container {
+        display: flex;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+
+      img {
+        margin: 0;
+        border: none;
+        width: 30%;
+        padding: 0;
+        height: 50px;
+        display: flex;
+        filter: saturate(0) brightness(100);
+        flex-direction: row-reverse;
+      }
+      .mainBody video {
+        z-index: -1;
+        position: absolute;
+        width: 100vw;
+        height: 120vh;
+        object-fit: cover;
+        filter: brightness(50%);
+      }
+
+      .berita-berjalan {
+        font-family: Arial, sans-serif;
+        background-color: #1029c9;
+        color: #f0f0f0;
+        border: 3px solid #000000;
+      }
+    </style>
+
+    <div class="navbar">
+      <img src="logos.png" alt="Home" />
+      <div class="left-nav"></div>
+      <div class="right-nav">
+        <ul>
+          <li class="icon">
+            <a href="#">MENU</a>
+          </li>
+          <li class="icon">
+            <a href="#">NEWS</a>
+          </li>
+          <li class="icon">
+            <a href="#">SEARCH</a>
+          </li>
+          <li class="icon">
+            <a href="#">UNIVERS</a>
+          </li>
+          <li class="icon">
+            <a href="#">CONTACT</a>
+          </li>
+          <li class="icon">
+            <a href="#">ABOUT</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="berita-berjalan">
+      <marquee behavior="scroll" direction="left">
+        Berita terbaru: Presiden meresmikan proyek infrastruktur baru | Timnas
+        Indonesia menang pertandingan | Cuaca ekstrem diperkirakan terjadi pekan
+        ini
+      </marquee>
+    </div>
+    <div class="mainBody">
+      <video src="bgvid.mp4" autoplay loop muted></video>
+      <div class="middleFloat"></div>
+    </div>
+  </body>
+</html>
